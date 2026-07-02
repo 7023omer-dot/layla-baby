@@ -141,11 +141,15 @@
 
   /* OFFER */
   .scm-page .offer{background:var(--panel)}
-  .scm-page .terms-gate{display:flex;justify-content:center;margin:0 0 22px}
-  .scm-page .tcheck{display:inline-flex;align-items:flex-start;gap:9px;font-size:14px;color:var(--ink2);cursor:pointer;max-width:540px;line-height:1.5}
-  .scm-page .tcheck input{margin-top:2px;width:17px;height:17px;accent-color:var(--red);flex:0 0 auto;cursor:pointer}
+  .scm-page .terms-gate{display:flex;justify-content:center;margin:0 0 24px}
+  .scm-page .tcheck{display:inline-flex;align-items:center;gap:12px;font-size:14.5px;color:var(--ink2);cursor:pointer;max-width:560px;line-height:1.5;background:#fff;border:1px solid var(--line);border-radius:999px;padding:12px 22px;box-shadow:0 6px 18px rgba(26,26,26,.05)}
+  .scm-page .tcheck input{appearance:none;-webkit-appearance:none;margin:0;width:24px;height:24px;border:2px solid var(--red);border-radius:50%;flex:0 0 auto;cursor:pointer;position:relative;transition:background .15s ease,box-shadow .15s ease}
+  .scm-page .tcheck input:hover{box-shadow:0 0 0 4px var(--red-tint)}
+  .scm-page .tcheck input:checked{background:var(--red)}
+  .scm-page .tcheck input:checked::after{content:"";position:absolute;inset-inline-start:7px;top:3px;width:6px;height:11px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
   .scm-page .tcheck a{color:var(--red);font-weight:700;text-decoration:underline}
-  .scm-page .terms-gate.warn .tcheck{color:var(--red);font-weight:600}
+  .scm-page .terms-gate.warn .tcheck{color:var(--red);font-weight:600;border-color:var(--red)}
+  .scm-page .terms-gate.warn .tcheck input{box-shadow:0 0 0 4px var(--red-tint)}
   @keyframes scm-shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-5px)}40%,80%{transform:translateX(5px)}}
   .scm-page .terms-gate.warn{animation:scm-shake .42s}
   .scm-page .offer .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;align-items:stretch;margin-top:8px}
