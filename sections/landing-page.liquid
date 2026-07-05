@@ -98,9 +98,12 @@
   .scm-page .hero .glow.a{width:380px;height:380px;background:rgba(209,31,45,.1);top:-90px;inset-inline-start:-70px;animation:scm-glow 7s ease-in-out infinite}
   .scm-page .hero .glow.b{width:320px;height:320px;background:rgba(209,31,45,.07);bottom:-90px;inset-inline-end:-50px}
   .scm-page .hero .in{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
+  .scm-page .hero .in > *{min-width:0}
   .scm-page .hero .pill{display:inline-flex;align-items:center;gap:9px;background:var(--white);border:1px solid var(--line2);border-radius:999px;padding:7px 15px;font-size:13px;font-weight:600;color:var(--ink2);margin-bottom:22px;box-shadow:0 4px 14px rgba(26,26,26,.04)}
   .scm-page .hero .pill .gd{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 9px rgba(209,31,45,.7);animation:scm-glow 2s ease-in-out infinite}
-  .scm-page .hero h1{font-size:clamp(31px,4.7vw,54px);font-weight:800;line-height:1.12;margin-bottom:20px;color:var(--ink)}
+  .scm-page .hero .hero-warn{display:flex;align-items:flex-start;gap:9px;background:var(--red-soft);border:1px solid #EFCCCF;border-radius:12px;padding:11px 15px;margin-bottom:16px;color:#7A1119;font-size:13.5px;font-weight:600;line-height:1.5;max-width:520px}
+  .scm-page .hero .hero-warn svg{width:18px;height:18px;flex:0 0 auto;color:var(--red);margin-top:1px}
+  .scm-page .hero h1{font-size:clamp(31px,4.7vw,54px);font-weight:800;line-height:1.12;margin-bottom:20px;color:var(--ink);writing-mode:horizontal-tb;white-space:normal;word-break:normal;overflow-wrap:break-word;max-width:100%}
   .scm-page .hero h1 em{display:block;color:var(--red);font-style:normal}
   .scm-page .hero .lead{color:var(--muted);font-size:clamp(16px,2vw,19px);font-weight:400;margin-bottom:26px;max-width:560px}
   .scm-page .hero .checks{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:30px}
@@ -328,13 +331,6 @@
   <!-- בס״ד -->
   <div class="scm-bsd">בס״ד</div>
 
-  <!-- הודעת אזהרה בכניסה -->
-  <div class="scm-warn" data-warn>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-    <span>שימו לב: המכשיר אינו מיועד למי שאיבד/ה את שיערו לחלוטין.</span>
-    <button type="button" class="x" data-warn-x aria-label="סגירה">×</button>
-  </div>
-
   <!-- 1. מרקיזת הכרזות -->
   <div class="marq" role="region" aria-label="הטבות">
     <div class="track">
@@ -363,6 +359,10 @@
     <span class="glow a"></span><span class="glow b"></span>
     <div class="wrap in">
       <div class="copy">
+        <div class="hero-warn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span>שימו לב: המכשיר אינו מיועד למי שאיבד/ה את שיערו לחלוטין.</span>
+        </div>
         <span class="pill"><span class="gd"></span> מכשיר 3-ב-1 לקרקפת · הטכנולוגיה מהקליניקות</span>
         <h1>אל תשלמו אלפי שקלים בקליניקות<em>לפני שניסיתם את זה.</em></h1>
         <p class="lead">אור אדום, עיסוי ואפליקטור סרום — הכל במכשיר אחד. 5 דקות ביום מהבית, בנוחות מלאה.</p>
@@ -453,7 +453,7 @@
           <div class="imgs"><img src="{{ 'tz-comb.webp' | asset_url }}" alt="מסרק אינפרא אדום" loading="lazy"></div>
           <h3>מסרק אינפרא אדום</h3>
           <p class="desc">המכשיר 3-ב-1 — אור אדום, עיסוי וסרום.</p>
-          <div class="prow"><span class="now">{% if main_p != blank %}{{ main_p.price | money }}{% else %}148 ש"ח{% endif %}</span><span class="was">199 ש"ח</span></div>
+          <div class="prow"><span class="now">{% if main_p != blank %}{{ main_p.price | money_without_currency | replace: ',', '' | replace: '.00', '' }} ש"ח{% else %}148 ש"ח{% endif %}</span><span class="was">199 ש"ח</span></div>
           <div class="save">חיסכון 51 ש"ח</div>
           {%- if main_p != blank -%}
             {%- form 'product', main_p -%}
@@ -569,7 +569,7 @@
     <div class="wrap w720 in">
       <h2>השיער שלך מחכה — בוא נתחיל</h2>
       <p class="lead">מבצע לזמן מוגבל · הצטרפו לאלפי לקוחות מרוצים.</p>
-      <div class="prow"><span class="now">{% if main_p != blank %}{{ main_p.price | money }}{% else %}148 ש"ח{% endif %}</span><span class="was">199 ש"ח</span></div>
+      <div class="prow"><span class="now">{% if main_p != blank %}{{ main_p.price | money_without_currency | replace: ',', '' | replace: '.00', '' }} ש"ח{% else %}148 ש"ח{% endif %}</span><span class="was">199 ש"ח</span></div>
       <a href="#offer" class="cta">מתחילים היום ←</a>
       <div class="trust"><span>משלוח חינם</span><span>תשלום מאובטח</span></div>
     </div>
