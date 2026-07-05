@@ -97,8 +97,9 @@
   .scm-page .hero .glow{position:absolute;border-radius:50%;filter:blur(80px);z-index:0;pointer-events:none}
   .scm-page .hero .glow.a{width:380px;height:380px;background:rgba(209,31,45,.1);top:-90px;inset-inline-start:-70px;animation:scm-glow 7s ease-in-out infinite}
   .scm-page .hero .glow.b{width:320px;height:320px;background:rgba(209,31,45,.07);bottom:-90px;inset-inline-end:-50px}
-  .scm-page .hero .in{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
+  .scm-page .hero .in{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,5vw,72px);align-items:start}
   .scm-page .hero .in > *{min-width:0}
+  .scm-page .hero .copy{min-width:0;max-width:100%}
   .scm-page .hero .pill{display:inline-flex;align-items:center;gap:9px;background:var(--white);border:1px solid var(--line2);border-radius:999px;padding:7px 15px;font-size:13px;font-weight:600;color:var(--ink2);margin-bottom:22px;box-shadow:0 4px 14px rgba(26,26,26,.04)}
   .scm-page .hero .pill .gd{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 9px rgba(209,31,45,.7);animation:scm-glow 2s ease-in-out infinite}
   .scm-page .hero .hero-warn{display:flex;align-items:flex-start;gap:9px;background:var(--red-soft);border:1px solid #EFCCCF;border-radius:12px;padding:11px 15px;margin-bottom:16px;color:#7A1119;font-size:13.5px;font-weight:600;line-height:1.5;max-width:520px}
@@ -111,9 +112,9 @@
   .scm-page .hero .checks .ck{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900}
   .scm-page .hero .cta-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
   .scm-page .hero .rating{font-size:14px;color:var(--muted)}.scm-page .hero .rating .st{color:var(--gold)}
-  .scm-page .hero .media{position:relative}
-  .scm-page .hero .media .halo{position:absolute;inset:8% 10%;background:radial-gradient(circle,rgba(209,31,45,.16),transparent 70%);filter:blur(40px);z-index:0}
-  .scm-page .hero .media img{position:relative;z-index:1;width:100%;border-radius:16px;box-shadow:0 30px 60px rgba(26,26,26,.16);animation:scm-float 6s ease-in-out infinite}
+  .scm-page .hero .media{position:relative;margin-top:-18px}
+  .scm-page .hero .media .halo{position:absolute;inset:-2% 2%;background:radial-gradient(circle,rgba(209,31,45,.28),transparent 68%);filter:blur(48px);z-index:0}
+  .scm-page .hero .media img{position:relative;z-index:1;width:100%;border-radius:18px;box-shadow:0 44px 90px rgba(26,26,26,.28);animation:scm-float 6s ease-in-out infinite}
 
   /* וידאו + טקסט רגשי */
   .scm-page .video-sec{background:var(--white)}
@@ -343,8 +344,9 @@
   <nav class="nav">
     <div class="wrap in">
       <div class="nav-links">
-        <a href="#" data-open-terms>תקנון</a>
+        <a href="#offer">המבצעים שלנו</a>
         <a href="#how">איך זה עובד</a>
+        <a href="#" data-open-terms>תקנון</a>
         <a href="#" data-open-contact>דברו איתנו</a>
       </div>
       <div class="brand-group">
