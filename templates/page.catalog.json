@@ -3,8 +3,8 @@
     "regrow-products": {
       "type": "regrow-products",
       "settings": {
-        "heading": "הקטלוג המלא",
-        "subheading": "כל מוצרי צומחים מחדש — לבחירתך.",
+        "heading": "המוצרים שבמבצע",
+        "subheading": "המסרק והתוספים שנכללים בערכות שלנו.",
         "collage_asset": "tz-collage.webp",
         "max_products": 0,
         "show_catalog_button": false,
@@ -12,18 +12,45 @@
         "bundles_sub": "חוסכים יותר כשמשלבים."
       },
       "blocks": {
-        "comb": { "type": "product", "settings": { "image_asset": "tz-comb.webp", "title": "מסרק אינפרא אדום לצמיחת שיער", "description": "טכנולוגיית אור אדום + עיסוי ורטט שמעוררת את זקיקי השיער, מחזקת שורשים ומשיבה ברק וחיוניות.", "price": "148 ₪", "compare_price": "219 ₪", "badge": "32% · 71 ₪", "flagship": true } },
-        "spartan": { "type": "product", "settings": { "image_asset": "tz-spartan.webp", "title": "Spartan — שמפו מפעיל שורשים", "description": "שמפו מפעיל שורשים לחיזוק השיער מהבסיס, מעניק נפח ותחושת קרקפת בריאה.", "price": "49 ₪", "compare_price": "69 ₪", "badge": "29% · 20 ₪" } },
-        "hoegoa_black": { "type": "product", "settings": { "image_asset": "tz-hoegoa-black.webp", "title": "שמפו רוזמרין + קרטין Hoegoa", "description": "רוזמרין וקרטין לחיזוק שיער דליל, שיקום והגנה מפני נזקים.", "price": "49 ₪", "compare_price": "69 ₪", "badge": "29% · 20 ₪" } },
-        "hoegoa_green": { "type": "product", "settings": { "image_asset": "tz-hoegoa-green.webp", "title": "שמפו רוזמרין מנט Hoegoa", "description": "רוזמרין ומנטה לקרקפת רעננה, ניקוי עמוק וחיזוק השיער.", "price": "49 ₪", "compare_price": "69 ₪", "badge": "29% · 20 ₪" } },
-        "rosemary_oil": { "type": "product", "settings": { "image_asset": "tz-rosemary.webp", "title": "שמן רוזמרין לצמיחת שיער", "description": "שמן טבעי שמחזק את השורשים, משפר זרימת דם ומסייע לצמיחה בריאה.", "price": "49 ₪", "compare_price": "69 ₪", "badge": "29% · 20 ₪" } },
-        "batana": { "type": "product", "settings": { "image_asset": "tz-batana.webp", "title": "שמן בטאנה (Batana Oil)", "description": "שמן טבעי לשיקום שיער, הזנה עמוקה וחיזוק השורשים — ברק וחיוניות.", "price": "59 ₪", "compare_price": "89 ₪", "badge": "34% · 30 ₪" } },
-        "ghkcu": { "type": "product", "settings": { "image_asset": "tz-ghkcu.webp", "title": "סרום GHK-CU", "description": "סרום פפטיד נחושת לחידוש השיער, עידוד צמיחה מחודשת ושיפור מראה השיער.", "price": "59 ₪", "compare_price": "89 ₪", "badge": "34% · 30 ₪" } },
-        "fasthair": { "type": "product", "settings": { "image_asset": "tz-fasthair.webp", "title": "Fast Hair Essence", "description": "פורמולה טבעית לחיזוק השיער, מעניקה נפח ועידוד צמיחה בריאה ומלאה.", "price": "69 ₪", "compare_price": "99 ₪", "badge": "30% · 30 ₪" } },
-        "sevendays": { "type": "product", "settings": { "image_asset": "tz-7days.webp", "title": "7 Days — סרום צמיחה (ג'ינג'ר, 10ml)", "description": "סרום ג'ינג'ר מרוכז לעידוד צמיחה ושיפור צפיפות — מוצר כניסה מושלם.", "price": "39 ₪", "compare_price": "59 ₪", "badge": "34% · 20 ₪" } }
+        "comb": {
+          "type": "product",
+          "settings": {
+            "image_asset": "tz-comb.webp",
+            "title": "מסרק אינפרא אדום לצמיחת שיער",
+            "description": "טכנולוגיית אור אדום + עיסוי ורטט שמעוררת את זקיקי השיער, מחזקת שורשים ומשיבה ברק וחיוניות.",
+            "price": "148 ₪",
+            "compare_price": "219 ₪",
+            "badge": "32% · 71 ₪",
+            "flagship": true
+          }
+        },
+        "ghkcu": {
+          "type": "product",
+          "settings": {
+            "image_asset": "tz-ghkcu.webp",
+            "title": "סרום GHK-CU",
+            "description": "סרום פפטיד נחושת לחידוש השיער, עידוד צמיחה מחודשת ושיפור מראה השיער.",
+            "price": "59 ₪",
+            "compare_price": "89 ₪",
+            "badge": "34% · 30 ₪"
+          }
+        },
+        "spartan": {
+          "type": "product",
+          "settings": {
+            "image_asset": "tz-spartan.webp",
+            "title": "Spartan — שמפו מפעיל שורשים",
+            "description": "שמפו מפעיל שורשים לחיזוק השיער מהבסיס, מעניק נפח ותחושת קרקפת בריאה.",
+            "price": "49 ₪",
+            "compare_price": "69 ₪",
+            "badge": "29% · 20 ₪"
+          }
+        }
       },
       "block_order": [
-        "comb", "spartan", "hoegoa_black", "hoegoa_green", "rosemary_oil", "batana", "ghkcu", "fasthair", "sevendays"
+        "comb",
+        "ghkcu",
+        "spartan"
       ]
     }
   },
