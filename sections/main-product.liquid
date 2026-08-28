@@ -108,7 +108,7 @@
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}">
-        {% render 'product-media-gallery', variant_images: variant_images, section %}
+        {% render 'product-media-gallery', variant_images: variant_images %}
       </div>
       {%- liquid
         if section.settings.hide_variants and variant_images.size == product.media.size
@@ -4362,3 +4362,14 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'product-media-gallery', variant_images: variant_images, section
+    %}"
+  to: "{% render 'product-media-gallery', variant_images: variant_images %}"
+  position: 4771..4839
+{% endcomment %}
